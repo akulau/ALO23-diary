@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Learning Diary</title>
+    <title>My ALO Diary</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
 </head>
 <body>
-    <div id="content">
-        {% include_relative README.md %}
-    </div>
+    <div id="content"></div>
+
+    <script>
+        fetch('https://raw.githubusercontent.com/username/repo/master/README.md')
+        .then(response => response.text())
+        .then(text => {
+            // Create a new showdown converter
+            var converter = new showdown.Converter();
+
+            // Convert markdown to HTML
+            let html = converter.makeHtml(text);
+
+            // Create a temporary div to manipulate the HTML
+            let tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+
+            // Change color of all h1 elements
+            tempDiv.querySelectorAll('h1').forEach(h1 => {
+                h1.style.color = 'red';
+            });
+
+            // Get the manipulated HTML and set it as the innerHTML of the content div
+            document.getElementById('content').innerHTML = tempDiv.innerHTML;
+        });
+    </script>
 </body>
 </html>
