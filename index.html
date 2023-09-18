@@ -29,18 +29,31 @@
             // Get the manipulated HTML and set it as the innerHTML of the content div
             document.getElementById('content').innerHTML = tempDiv.innerHTML;
         });
+        
+        // Fetch diary entries from 2023-09-17 onwards
+        // Start date
+        var startDate = new Date(2023, 8, 17); // Months are zero-based
 
-        fetch('https://raw.githubusercontent.com/akulau/ALO-diary/main/2020-09-18.md')
-        .then(response => response.text())
-        .then(text => {
-            let html = converter.makeHtml(text);
-            let tempDiv = document.createElement('div');
-            tempDiv.innerHTML = html;
-            tempDiv.querySelectorAll('h1').forEach(h1 => {
-                h1.style.color = 'red';
+        // Today's date
+        var endDate = new Date();
+        
+        for (var d = startDate; d <= endDate; d.setDate(d.getDate() + 1)) {
+            // Construct the filename
+            var filename = `${d.getFullYear()}-${(d.getMonth()+1).toString().padStart(2, '0')}-${d.getDate().toString().padStart(2, '0')}.md`;
+
+            fetch(`https://raw.githubusercontent.com/username/repo/master/entries/${filename}`)
+            .then(response => {
+                if (response.status === 200) {
+                    // If the file exists, convert it to HTML and add it to the page
+                    response.text().then(text => {
+                        let html = converter.makeHtml(text);
+                        let div = document.createElement('div');
+                        div.innerHTML = html;
+                        document.body.appendChild(div);
+                    });
+                }
             });
-            document.getElementById('content2').innerHTML = tempDiv.innerHTML;
-        });
+        }
     </script>
 </body>
 </html>
