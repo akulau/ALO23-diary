@@ -1,14 +1,18 @@
----
----
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ALO Diary</title>
-  </head>
-  <body>
-    {% include_relative README.md %}
-  </body>
+<html>
+<head>
+    <title>My Learning Diary</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div id="content"></div>
+
+    <script>
+        fetch('https://raw.githubusercontent.com/akulau/ALO-diary/main/README.md')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('content').innerHTML = marked(text);
+            });
+    </script>
+</body>
 </html>
