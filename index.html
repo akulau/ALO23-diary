@@ -6,7 +6,8 @@
 </head>
 <body>
     <div id="content"></div>
-
+    <div id="content2"></div>
+    
     <script>
         fetch('https://raw.githubusercontent.com/akulau/ALO-diary/main/README.md')
         .then(response => response.text())
@@ -28,6 +29,18 @@
 
             // Get the manipulated HTML and set it as the innerHTML of the content div
             document.getElementById('content').innerHTML = tempDiv.innerHTML;
+        });
+
+        fetch('https://raw.githubusercontent.com/akulau/ALO-diary/main/2020-09-18.md')
+        .then(response => response.text())
+        .then(text => {
+            let html = converter.makeHtml(text);
+            let tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            tempDiv.querySelectorAll('h1').forEach(h1 => {
+                h1.style.color = 'red';
+            });
+            document.getElementById('content2').innerHTML = tempDiv.innerHTML;
         });
     </script>
 </body>
