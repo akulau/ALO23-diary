@@ -18,4 +18,7 @@ Anyone who needs a quick and dirty way of viewing multiple markdown files.
 Change it
 
 ## Isn't bombing the repository with requests extremely inefficient
-Yes
+Yes but it was fast to implement
+
+## How do I use it?
+Slap your .md-files to the "entries" directory and change the description to your liking. If you use a different naming scheme, you need to update the script in index.html that loops through the directory.
