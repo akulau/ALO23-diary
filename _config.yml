@@ -1,5 +1,0 @@
-markdown: kramdown
-plugins:
-  - jekyll-remote-theme
-  
-remote_theme: pages-themes/slate
