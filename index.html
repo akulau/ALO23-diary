@@ -3,42 +3,7 @@
 <head>
     <title>My ALO Diary</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
-    <style>
-        html {
-            font-family: Calibri;
-        }
-        h1 {
-            font-family: Papyrus;
-            font-weight: bold;
-        }
-        #content {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .entry {
-            width: 45%;
-            min-width: 45%;
-            height: 20rem;
-            overflow: auto;
-            margin: auto;
-            margin-top: 1rem;
-            padding: 2rem;
-            border: 2px dotted rgb(167, 167, 167);
-            border-radius: .5rem;
-            background: repeating-linear-gradient(0deg, rgba(255,255,255,1) 45%, rgb(233, 233, 233) 46%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 55%);
-            background-repeat: repeat-y;
-            background-size: cover;
-        }
-        code {
-            color: white;
-            background: rgb(50,50,50);
-            padding: 0.2em 0.4em;
-            border-radius: .3rem;
-        }
-        li {
-            padding: .1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="{{site.baseurl}}/style.css/"
 </head>
 <body>
     <div id="description"></div>
