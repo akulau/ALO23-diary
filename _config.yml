@@ -1,2 +1,3 @@
 baseurl: "https://raw.githubusercontent.com/akulau/ALO-diary/main"
 content_directory: "entries"
+description: "Diary_description.md"
