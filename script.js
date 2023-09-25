@@ -5,6 +5,8 @@ const REPOSITORY_URL = "{{ site.baseurl }}";
 const DESCRIPTION = "{{ site.description }}";
 const CONTENT_DIRECORY = "{{ site.content_directory }}";
 
+let startDate = new Date("{{ site.start_date }}") // Months are zero-based
+
 const dateToString = (d) => {
     return `${d.getFullYear()}-${(d.getMonth()+1).toString().padStart(2, '0')}-${d.getDate().toString().padStart(2, '0')}`;
 }
@@ -49,7 +51,4 @@ const fetchEntries = async (sd, ed) => {
 }
 
 fetchDescription();
-
-// Fetch diary entries from 2023-09-17 onwards
-let startDate = new Date(2023, 8, 17); // Months are zero-based
-let entries = fetchEntries(startDate);
+fetchEntries(startDate);
