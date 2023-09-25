@@ -3,7 +3,7 @@
 
 const REPOSITORY_URL = "{{ site.baseurl }}";
 const DESCRIPTION = "Diary_description.md";
-const CONTENT_DIRECORY = "entries"
+const CONTENT_DIRECORY = "{{ site.content_directory }}"
 
 const dateToString = (d) => {
     return `${d.getFullYear()}-${(d.getMonth()+1).toString().padStart(2, '0')}-${d.getDate().toString().padStart(2, '0')}`;
