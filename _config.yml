@@ -1,3 +1,4 @@
 baseurl: "https://raw.githubusercontent.com/akulau/ALO-diary/main"
 content_directory: "entries"
 description: "Diary_description.md"
+start_date: "2023-09-17"
