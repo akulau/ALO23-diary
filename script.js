@@ -1,4 +1,7 @@
-const REPOSITORY_URL = "https://raw.githubusercontent.com/akulau/ALO-diary/main/";
+---
+---
+
+const REPOSITORY_URL = "{{ site.baseurl }}";
 const DESCRIPTION = "Diary_description.md";
 const CONTENT_DIRECORY = "entries"
 
