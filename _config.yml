@@ -1,4 +1,5 @@
-baseurl: "https://raw.githubusercontent.com/akulau/ALO-diary/main"
+baseurl: "https://raw.githubusercontent.com/Ka-Q/multi-markdown-viewer/main"
 content_directory: "entries"
-description: "Diary_description.md"
+description: "description.md"
 start_date: "2023-09-17"
+end_date: "2023-09-30"
