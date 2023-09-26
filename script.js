@@ -5,7 +5,8 @@ const REPOSITORY_URL = "{{ site.baseurl }}";
 const DESCRIPTION = "{{ site.description }}";
 const CONTENT_DIRECORY = "{{ site.content_directory }}";
 
-let startDate = new Date("{{ site.start_date }}") // Months are zero-based
+let START_DATE = new Date("{{ site.start_date }}") || new Date(); // Months are zero-based
+let END_DATE = new Date("{{ site.end_date }}") || new Date();
 
 const dateToString = (d) => {
     return `${d.getFullYear()}-${(d.getMonth()+1).toString().padStart(2, '0')}-${d.getDate().toString().padStart(2, '0')}`;
@@ -26,7 +27,7 @@ const fetchEntries = async (sd, ed) => {
     let content = document.getElementById('content');
     let entries = [];
 
-    let startDate = sd || new Date(2023, 8, 17); // Months are zero-based
+    let startDate = sd || new Date(); // Months are zero-based
     let endDate = ed || new Date();
     
     for (var d = startDate; d <= endDate; d.setDate(d.getDate() + 1)) {
@@ -51,4 +52,4 @@ const fetchEntries = async (sd, ed) => {
 }
 
 fetchDescription();
-fetchEntries(startDate);
+fetchEntries(START_DATE, END_DATE);
