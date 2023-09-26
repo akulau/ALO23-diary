@@ -2,4 +2,4 @@
 
 
 - Aku Laurila ([@Ka-Q](https://github.com/Ka-Q)).
-- Single entries in directory [multi-mardown-viewer/entries](https://github.com/akulau/ALO23-diary/tree/main/entries)
+- Single entries in directory [ALO23-diary/entries](https://github.com/akulau/ALO23-diary/tree/main/entries)
