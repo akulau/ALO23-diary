@@ -1,4 +1,5 @@
-# This is a template description for Multi Markdown viewer.
-You can tell about your project here
-- Made by Aku Laurila ([@Ka-Q](https://github.com/Ka-Q)).
-- Single entries in directory [multi-mardown-viewer/entries](https://github.com/Ka-Q/multi-markdown-viewer/tree/main/entries)
+# Tässä on minun ALO23-kurrsin oppimispäiväkirjani verkkomuodossa.
+
+
+- Aku Laurila ([@Ka-Q](https://github.com/Ka-Q)).
+- Single entries in directory [multi-mardown-viewer/entries](https://github.com/akulau/ALO23-diary/tree/main/entries)
