@@ -1,4 +1,4 @@
-# ALO-diary
+# Multi Markdown Viewer
 This is a hacky way of displaying the contents of multiple markdown(```.md```) files on a web page. The webpage assumes the markdown files (except the description) are located at the "content_directory" specified in the ```_config.yml``` and their names are formatted as "yyyy-mm-dd.md". Since there is no way to fetch all content from a repository's directory, we instead try fetching singular files with a predictable naming scheme.
 
 
