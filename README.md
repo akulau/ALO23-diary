@@ -21,4 +21,4 @@ Change it. It's all in the ```style.css``` file.
 Yes but it was fast to implement
 
 ## How do I use it?
-Slap your ```.md```-files to the "entries" directory and change the description to your liking. Update the ```_config.yml``` values to suit your needs. They are pretty self explanitory. If you use a different naming scheme, you need to update the script in ```script.js``` that loops through the directory.
+Slap your ```.md```-files to the "entries" directory and change the description to your liking. Update the ```_config.yml``` values to suit your needs. They are pretty self explanitory. If you use a different naming scheme, you need to update the script in ```script.js``` that loops through the directory. By default, the script scans the content directory from the start_date to end_date. If either one is omitted, both values default to the current date. For example, to look for all files after, set the start_date to 2023-09-26 and remove the end_date completely. Remember, however, that if the start date is far in the past, the script checks every day until the current date. 
