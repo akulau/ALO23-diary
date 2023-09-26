@@ -1,1 +1,1 @@
-# This folder contains the entries for my ALO23 Diary
+# This folder contains the markdown files
